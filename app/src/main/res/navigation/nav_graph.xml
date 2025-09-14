@@ -17,11 +17,24 @@
         android:id="@+id/dashboardFragment"
         android:name="com.example.nit3213app.ui.DashboardFragment"
         android:label="Dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
 
     <argument
         android:name="keypass"
         app:argType="string" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.nit3213app.ui.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="artwork"
+            app:argType="com.example.nit3213app.model.Artwork" />
+    </fragment>
+
 
 </navigation>

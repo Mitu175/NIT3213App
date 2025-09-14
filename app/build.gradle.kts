@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")                // Enables Kotlin annotation processing
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
+    // Enables Kotlin annotation processing
     id("com.google.dagger.hilt.android")
-   // id("androidx.navigation.safeargs.kotlin")
-
+    id("androidx.navigation.safeargs.kotlin")
 
 }
 
@@ -67,3 +68,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.3")
+    }
+}
+
+

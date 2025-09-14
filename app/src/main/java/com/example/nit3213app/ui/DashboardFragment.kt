@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nit3213app.adapter.EntityAdapter
 import com.example.nit3213app.viewmodel.DashboardViewModel
 import com.example.nit3213app.R
+import kotlinx.coroutines.flow.collect
 
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
@@ -29,7 +30,7 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
                     if (entities.isNotEmpty()) {
                         recyclerView.adapter = EntityAdapter(entities) { artwork ->
                             // On item click
-                            Toast.makeText(requireContext(), artwork.artworkTitle, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), "No entities available", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

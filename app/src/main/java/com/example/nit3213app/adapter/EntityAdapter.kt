@@ -4,11 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nit3213app.R
 import com.example.nit3213app.model.Artwork
-
-
+import com.example.nit3213app.ui.DashboardFragmentDirections
+import androidx.navigation.findNavController
 
 
 class EntityAdapter(
@@ -21,6 +22,8 @@ class EntityAdapter(
         val artist: TextView = itemView.findViewById(R.id.textArtist)
         val medium: TextView = itemView.findViewById(R.id.textMedium)
         val year: TextView = itemView.findViewById(R.id.textYear)
+        val btnViewDetails: Button = itemView.findViewById(R.id.btnViewDetails)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntityViewHolder {
@@ -35,8 +38,11 @@ class EntityAdapter(
         holder.medium.text = entity.medium
         holder.year.text = entity.year.toString()
 
-        holder.itemView.setOnClickListener {
-            onItemClick(entity)
+        holder.btnViewDetails.setOnClickListener {
+            // Navigate to DetailsFragment using SafeArgs
+            val action = DashboardFragmentDirections
+                .actionDashboardFragmentToDetailsFragment(entity)
+            holder.itemView.findNavController().navigate(action)
         }
     }
 
