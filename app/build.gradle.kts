@@ -54,14 +54,16 @@ dependencies {
         implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
         implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
         implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+        // gson
+        implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-        // Navigation Component
+    // Navigation Component
         implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
         implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
 
         // Hilt for Dependency Injection
-    implementation("com.google.dagger:hilt-android:2.51.1")   // Core Hilt library
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")    // Annotation processor
+    implementation("com.google.dagger:hilt-android:2.57.1")   // Core Hilt library
+    kapt("com.google.dagger:hilt-android-compiler:2.57.1")    // Annotation processor
 
 
     testImplementation(libs.junit)

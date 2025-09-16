@@ -11,8 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nit3213app.adapter.EntityAdapter
 import com.example.nit3213app.viewmodel.DashboardViewModel
 import com.example.nit3213app.R
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
+import android.util.Log
 
+
+@AndroidEntryPoint
 class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     private val viewModel: DashboardViewModel by viewModels()
@@ -20,6 +24,10 @@ class DashboardFragment : Fragment(R.layout.fragment_dashboard) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Hilt check
+        Log.d("HiltCheck", "DashboardViewModel injected: $viewModel")
+
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
