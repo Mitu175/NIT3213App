@@ -13,13 +13,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
+
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
     private const val BASE_URL = "https://nit3213api.onrender.com/"
 
-    // ✅ Moshi instance
+    //  Moshi instance
     @Provides
     @Singleton
     fun provideMoshi(): Moshi =
@@ -36,13 +37,13 @@ object AppModule {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
 
-    // ✅ ApiService
+    //  ApiService
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService =
         retrofit.create(ApiService::class.java)
 
-    // ✅ DashboardRepository
+    //  DashboardRepository
     @Provides
     @Singleton
     fun provideDashboardRepository(apiService: ApiService): DashboardRepository =
