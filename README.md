@@ -1,4 +1,4 @@
-﻿# NIT3213App
+# NIT3213App
 
 
 This is an Android application developed for the NIT3213 assessment.  
@@ -49,22 +49,18 @@ It demonstrates:
 ### API Details
 
 - **Base URL:** `https://nit3213api.onrender.com/`
-- **Login Endpoint:** `/footscray/auth` (or `/sydney/auth` / `/br/auth`)
 - **Dashboard Endpoint:** `/dashboard/{keypass}`
 
----
 
 ### Getting Started
 
 1. Clone the repository:
+   git clone https://github.com/YourUsername/NIT3213App.git
+2.Open in Android Studio.
 
+3.Build and run the app on an emulator or device.
 
-git clone https://github.com/YourUsername/NIT3213App.git
- 2.Open in Android Studio.
-
- 3.Build and run the app on an emulator or device.
-
- 4.Enter your student credentials to log in.
+4.Enter your student credentials to log in.
 
 
 Author
@@ -73,4 +69,3 @@ Your Name: Mitu Das
 
 Course: NIT3213 Android Application Development
 
-Date: 13/9/25
