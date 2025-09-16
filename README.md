@@ -61,12 +61,18 @@ It demonstrates:
 git clone https://github.com/YourUsername/NIT3213App.git
 
  2.Open in Android Studio.
+ 
  3.Build and run the app on an emulator or device.
+ 
  4.Enter your student credentials to log in.
 
 
 Author
+
 Your Name: Mitu Das
+
 Course: NIT3213 Android Application Development
+
 Date: 16/9/25
+
 
