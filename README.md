@@ -67,6 +67,46 @@ git clone https://github.com/YourUsername/NIT3213App.git
  4.Enter your student credentials to log in.
 
 
+ Setup Instructions
+1. Clone the repository
+git clone https://github.com/YourUsername/NIT3213App.git
+cd NIT3213App
+
+2. Open in Android Studio
+
+Use Android Studio Ladybug or newer.
+
+Select "Open an Existing Project" and point to this folder.
+
+3. Dependencies
+
+Make sure you have these installed (already included in build.gradle.kts):
+
+Hilt – Dependency Injection
+
+Retrofit + Moshi/Gson – Networking
+
+Navigation Component – Fragment navigation
+
+JUnit & Mockito – Testing
+
+4. Build & Run
+
+Sync Gradle (File → Sync Project with Gradle Files)
+
+Build the project (Build → Make Project)
+
+Run on an emulator or device (minSdk = 24, targetSdk = 36).
+
+5. Login Credentials
+
+Username: Your student first name
+
+Password: Your student ID
+
+
+
+
 Author
 
 Your Name: Mitu Das
@@ -74,5 +114,6 @@ Your Name: Mitu Das
 Course: NIT3213 Android Application Development
 
 Date: 16/9/25
+
 
 
