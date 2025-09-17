@@ -28,7 +28,7 @@ object AppModule {
             .add(KotlinJsonAdapterFactory())
             .build()
 
-    // ✅ Retrofit instance
+    // Retrofit instance
     @Provides
     @Singleton
     fun provideRetrofit(moshi: Moshi): Retrofit =
@@ -49,5 +49,11 @@ object AppModule {
     fun provideDashboardRepository(apiService: ApiService): DashboardRepository =
         DashboardRepository(apiService)
 
+    //  LoginRepository
+    @Provides
+    @Singleton
+    fun provideLoginRepository(apiService: ApiService): LoginRepository {
+        return LoginRepository(apiService)
 
+    }
 }
